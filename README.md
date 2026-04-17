@@ -225,11 +225,6 @@ Currently based in Zürich, Switzerland, pursuing entry-level roles in MRO and a
 
 Interests: Aerospace systems, smart materials, soft robotics, CAD, and building things that work with minimal complexity.
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License. See `LICENSE` for details.
 
 ---
 
