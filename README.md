@@ -1,270 +1,241 @@
-# 🦾 Robotics Programmable Matter — Robotic Skin Prototype
+# 🦾 Robotic Skin — SMA-Actuated Programmable Matter Prototype
 
-> **Final Year Individual Project** | ENGG341 | University of Liverpool — School of Engineering  
-> **Author:** Shageeshan Alagesan | MEng Aerospace Engineering | May 2025  
-> **Supervisor:** Paolo Paoletti | Project No. 183/4
+A lightweight, modular robotic skin prototype capable of conforming to the shape of a human forearm using Shape Memory Alloy (SMA) spring actuation. This project bridges **soft robotics**, **programmable matter**, and **adaptive wearable systems** — demonstrating controlled shape deformation without motors or complex electronics.
 
 ---
 
-## 📌 Table of Contents
+## 📋 Table of Contents
 
-- [Project Overview](#project-overview)
-- [Skills Demonstrated](#skills-demonstrated)
-- [Background & Motivation](#background--motivation)
-- [Aims & Objectives](#aims--objectives)
-- [Project Approach](#project-approach)
-- [Literature Review](#literature-review)
-- [Methodology](#methodology)
-- [Results](#results)
-- [Discussion & Design Improvements](#discussion--design-improvements)
-- [Sustainability & Reflections](#sustainability--reflections)
-- [Conclusion](#conclusion)
-- [References](#references)
+<details>
+<summary>🔍 Click to expand navigation</summary>
 
----
+- 🤖 [Overview](#-overview)
+- 🎥 [Demonstration](#-demonstration)
+- ⚡ [Key Features](#-key-features)
+- 📁 [Project Structure](#-project-structure)
+- 🔬 [Technical Deep Dive](#-technical-deep-dive)
+  - [Structural Design](#1-structural-design)
+  - [SMA Actuation System](#2-sma-actuation-system)
+  - [Electrical Circuit Design](#3-electrical-circuit-design)
+  - [Testing Methodology](#4-testing-methodology)
+- 📊 [Results & Performance](#-results--performance)
+- 🛠️ [Design Improvements](#️-design-improvements)
+- 🚀 [Future Work](#-future-work)
+- 🌍 [Applications](#-applications)
+- 📝 [Academic Context](#-academic-context)
+- 👤 [About](#-about)
+- 📄 [License](#-license)
+- 📧 [Contact](#-contact)
 
-## Project Overview
-
-This project designed and built a **shape-adaptive robotic skin prototype** capable of wrapping around a human forearm through electrically-triggered actuation. The system uses **Shape Memory Alloy (SMA) springs** as the active actuators, embedded within a lightweight modular framework of plywood panels and flush hinges.
-
-The prototype successfully demonstrated **controlled, repeatable inward bending** in approximately 20 seconds using a simple battery-powered circuit — with no motors, complex electronics, or external pneumatic systems required.
-
-This work sits at the intersection of **programmable matter**, **soft robotics**, and **wearable technology**, with potential applications in:
-
-- Medical rehabilitation exosuits
-- VR / AR haptic feedback gloves
-- Space exploration adaptive structures
-- Lightweight robotic gripper mechanisms
+</details>
 
 ---
 
-## Skills Demonstrated
+## 🤖 Overview
 
-| Skill Area | Details |
-|---|---|
-| **Engineering Design** | Iterative prototype development from concept through physical build and testing |
-| **Smart Materials** | Research and hands-on application of Shape Memory Alloys (Nitinol SMA springs) |
-| **Mechanical Fabrication** | Panel cutting, hinge assembly, triangular bracing, and eyelet integration using workshop tools |
-| **Electrical Systems** | Circuit design, soldering, resistive heating actuation, and dual-circuit (open/close) wiring |
-| **Experimental Testing** | Qualitative performance evaluation through manual pull tests, thermal validation, and electrical actuation cycles |
-| **Problem Solving & Iteration** | Identified and resolved friction, alignment, and actuation deficiencies across multiple design iterations |
-| **Literature Research** | Comprehensive review of programmable matter, SMA actuation, robotic skins, and wearable robotics literature |
-| **Technical Writing** | Structured academic report covering methodology, results, and critical analysis |
-| **Sustainability Thinking** | Energy analysis (≈300 J per cycle), use of recyclable materials, and consideration of long-term fatigue |
-| **Project Management** | Independently managed a multi-semester project with scope changes, workshop coordination, and supervised testing |
+This project develops a **proof-of-concept robotic skin** — a flexible, modular surface structure that can change shape to wrap around a human forearm using electrical stimulation. The system uses **Shape Memory Alloy (SMA) springs** as compact, motorless actuators integrated into a panel-and-hinge mechanical framework.
+
+Rather than relying on conventional motors or pneumatics, this prototype demonstrates that **smart materials combined with thoughtful mechanical design** can produce meaningful, controlled actuation at low cost and with minimal system complexity.
+
+> 🎯 **Performance Highlights:** 6-Panel Modular Structure • SMA Spring Actuation • ~20s Closing Cycle • ~300J per Cycle • Battery Powered • No Motors
 
 ---
 
-## Background & Motivation
+## 🎥 Demonstration
 
-Recent advances in engineering have enabled the development of materials and structures that adapt to changing conditions. **Programmable matter** refers to materials that can alter their composition, density, or stiffness upon external stimuli. **Adaptive robotics** involves devices that modify their motion based on the task at hand.
+### 📸 Prototype Gallery
 
-Three key domains motivate this research:
+> *Photos of the prototype in open, actuating, and closed states are documented in the Appendix of the project report.*
 
-**Healthcare:** Existing exoskeleton devices for patient rehabilitation are heavy and uncomfortable. A lightweight, flexible alternative could improve patient compliance and recovery outcomes.
-
-**Entertainment / VR:** Present-day VR suits are restricted by large sensors and wiring. Adaptive wearable skin can enable natural, fluid movement while delivering haptic feedback.
-
-**Space Exploration:** Systems capable of changing shape based on mission demands reduce payload weight and increase flexibility in long-duration missions where repairs are impractical.
-
-This project represents a proof-of-concept addressing these challenges using only low-cost, commonly available materials — demonstrating that meaningful progress can be achieved without high-cost laboratory resources.
+**Prototype States:**
+- 🟢 **Open / Resting** — Panels flat, springs at resting length (~2 cm)
+- 🔴 **Actuating (Closing)** — SMA springs contract under current, panels curl inward
+- 🔵 **Closed / Wrapped** — Structure conforms around forearm geometry
 
 ---
 
-## Aims & Objectives
+## ⚡ Key Features
 
-### Aim
-To design and develop a lightweight, flexible prototype structure capable of adapting its shape to wrap around the human forearm, using SMA springs as the primary actuation mechanism, as a proof of concept for future full-body adaptive systems.
-
-### Objectives
-
-1. Design and fabricate a flexible framework of light plywood panels and flush hinges to allow controlled flexibility.
-2. Characterise the reaction of SMA springs to electrical stimulation to be utilised as actuating devices.
-3. Integrate the structural design and SMA-based actuation system into a functioning prototype capable of shape adaptation.
-4. Test the prototype's deformability, flexibility, and sensitivity through manual test procedures.
-5. Determine the operational and performance limitations of the prototype from experimental test data.
+- 🧱 **Modular Panel Architecture** — Six 12 cm × 6 cm × 3.5 mm plywood panels connected by flush hinges for controlled, guided flexibility
+- 🔩 **SMA Spring Actuation** — Nitinol helical springs provide large deformation range under resistive heating (~2.5 A), eliminating the need for motors
+- ⚡ **Dual-Circuit Control** — Separate electrical circuits for opening and closing actuation, each with three springs in series
+- 🔋 **Battery Powered** — Operates from a 4× AA battery pack (~6 V), making it portable and self-contained
+- 📐 **Partial Bracing System** — Triangular plywood braces create a 120° guided deformation geometry; first three joints flexible, last three fixed
+- ♻️ **Low-Cost & Sustainable** — Built from recyclable plywood and standard hardware; ~300 J per actuation cycle
+- 🏥 **Multi-Domain Applicability** — Targets medical rehabilitation, VR/AR wearables, space adaptive structures, and robotic exosuits
 
 ---
 
-## Project Approach
+## 📁 Project Structure
 
-The project initially aimed to build an **origami-based foldable programmable matter system** combining SMA wires with an electromagnetic actuation system. However, during early planning (Week 4, Semester 1), this approach was found impractical — the required components were too small and complex to fabricate within the available time and resources.
-
-The project direction was revised toward a **panel-and-hinge modular robotic skin** design. Key decisions in this pivot included:
-
-- Replacing origami folds with **flush-hinged plywood panels** for simpler flexibility
-- Switching from **SMA wires to SMA springs**, which offer a much greater deformation range per activation cycle
-- Conducting preliminary mechanical testing using common wires before integrating SMA actuation
-
-Mechanical fabrication was carried out at the **Harrison Hughes Building 4th Floor Workshop**. Electrical assembly, soldering, and testing were completed under supervision at **Derek Neary's office** using solder stations and multimeters. Expert guidance on SMA material selection was provided by Richard Potter.
+```
+robotic-skin-sma-prototype/
+├── report/
+│   └── Shageeshan_Alagesan_201683484_Final_Report.pdf   # Full academic report
+├── figures/
+│   ├── fig1_sma_wire_before.jpg        # SMA wire pre-actuation (14.1 cm)
+│   ├── fig2_sma_wire_after.jpg         # SMA wire post-actuation (13.4 cm)
+│   ├── fig3_final_prototype.jpg        # Final assembled prototype
+│   ├── fig4_preliminary_testing.jpg    # Wire routing / flex tests
+│   ├── fig5_prototype_open.jpg         # Structure fully extended
+│   ├── fig6_prototype_closed.jpg       # Structure manually closed
+│   └── fig7_eyelets_installed.jpg      # Metal eyelets replacing plastic guides
+├── circuit/
+│   └── circuit_diagram.png            # Dual-circuit wiring schematic
+└── README.md
+```
 
 ---
 
-## Literature Review
+## 🔬 Technical Deep Dive
 
-### Programmable Matter & Shape-Adaptive Systems
-Programmable matter changes its physical properties (stiffness, shape, density) in response to external stimuli such as temperature, light, or electrical input (Gilpin et al., 2008). Combined with advances in smart materials and soft robotics, this enables structures that dynamically modify geometry to improve environmental interaction and efficiency.
+### 1. Structural Design
 
-### Robotic Skin & Flexible Surfaces
-Robotic skin refers to flexible, adaptive surfaces inspired by biological skin, capable of protection, sensing, and mechanical flexibility (Kim et al., 2013). Advances in soft electronics have enabled skins that fold onto curved geometries, are mechanically responsive, and can actively reshape (Someya & Amagai, 2019).
+The mechanical frame consists of **six modular plywood panels** (12 cm × 6 cm × 3.5 mm) connected sequentially by **flush hinges** to allow controlled bending. 
 
-### Shape Memory Alloys (SMAs)
-SMAs recover a pre-strained form upon thermal stimulation via a reversible martensitic phase transformation (Otsuka & Wayman, 1999). **Nickel-titanium (Nitinol)** alloys are the most studied, offering high mechanical strength and energy density (Lagoudas & Lagoudas, 2008). SMA springs — with their helical structure — offer far greater deformation range than straight wires, making them especially suited for flexible surface applications.
+Key design decisions:
+- **Plastic guides → Metal eyelets**: Initial plastic guides produced excessive friction at hinge joints. Replaced with steel eyelets screwed directly into the plywood for smoother actuator routing.
+- **Triangular bracing**: Plywood braces added between panels to enforce a 120° angular geometry. The last three panels are **fully fixed** (rigid); the first three joints have **one-sided bracing** (hot glue only), enabling up to ~60° of flexible movement per joint.
+- **Partial constraint approach**: This technique balances structural guidance with motion freedom, critical for reliable SMA actuation and return-to-form behaviour.
 
-### Actuation Method Selection
+---
 
-| Method | Advantages | Limitations |
+### 2. SMA Actuation System
+
+**Why SMA Springs over SMA Wires?**
+
+| Parameter | SMA Wire | SMA Spring |
 |---|---|---|
-| Pneumatic Actuators | High deformation, widely studied | Requires bulky external pumps; poor portability |
-| Electroactive Polymers (EAPs) | High deformation, fast response, low weight | Operate at high voltage; low output force |
-| **SMA Springs** ✅ | Compact, high deformation, sufficient force, no external hardware | Slower response; thermal fatigue over cycles |
+| Resting length | 14.1 cm | ~2 cm |
+| Contraction achieved | 7 mm (~5% strain) | Significantly larger |
+| Required for actuation | ~8% strain (1.6 cm) | ✅ Sufficient |
+| Verdict | ❌ Insufficient | ✅ Selected |
 
-SMA springs were selected as the optimal actuator for this project due to their balance of compactness, force output, and ability to produce visible shape adaptation without external bulky hardware.
+SMA wire tested at 0.8 A contracted only from 14.1 cm → 13.4 cm — not enough for functional bending. **SMA springs** (helical Nitinol) were selected due to their far greater deformation range under the same principle of resistive heating.
 
-### Research Gap
-Most prior work has focused on SMA material properties or large-scale adaptive structures. This project addresses the gap of **integrating SMA springs into a compact, panel-based modular wearable skin** at low cost — bridging wearable technology and soft robotics.
-
----
-
-## Methodology
-
-### Prototype Structure
-
-The prototype consisted of **six modular plywood panels** (12 cm × 6 cm × 3.5 mm each), connected in series using **flush hinges** to allow controlled bending.
-
-**Structural evolution through iterations:**
-
-1. **Initial build:** Fully flexible, six-panel chain with plastic wire guides (super-glued). Significant friction at hinge joints caused inconsistent movement — the last two panels barely bent under high pulling force.
-
-2. **Iteration 1 — Metal Eyelets:** Plastic guides replaced with steel eyelets screwed directly into the plywood, reducing friction and improving wire motion.
-
-3. **Iteration 2 — Triangular Braces:** Plywood triangular braces added between each panel to enforce a **120° fixed angular relationship**. The final three panels were fully fixed (rigid); the first three joints were partially braced (one side only), allowing bending up to approximately **60°**.
-
-This partial-bracing technique created a balance between structural guidance and motion freedom — critical for successful actuation.
-
-### Actuator Selection & Testing
-
-**SMA Wire (rejected):**
-- Wire was clamped and powered at 0.8 A under a 700 g load
-- Contracted from 14.1 cm → 13.4 cm (only ~7 mm / ≈5% strain)
-- Required ≈8% strain (1.6 cm) to close the structure — **insufficient**
-
-**SMA Springs (selected):**
-- Each spring ≈2 cm resting length, helical (Nitinol)
-- Thermally validated: Boiling water (>70°C) test confirmed instantaneous shape recovery
-- Electrically validated: Resistive heating via steel clips and battery current produced visible contraction
-- Three springs connected in series per circuit, powered by a **four-AA battery pack (~6V)**
-- Operating current: **2.5–3 A**
-
-### Circuit Design
-
-Two separate circuits were created:
-- **Closing circuit:** Energises SMA springs to pull panels inward
-- **Opening circuit:** Energises opposing SMA springs to push panels outward
-
-Current was applied manually by connecting exposed wire ends — no electronic switches or microcontrollers were used in this prototype.
+**Spring specification:**
+- Resting length: ~2 cm per spring
+- Operating current: 2.5–3 A
+- Mounted horizontally across the first three joints using metal eyelets
+- Validated via thermal test (boiling water >70°C) before electrical integration
 
 ---
 
-## Results
+### 3. Electrical Circuit Design
 
-### Pre-Integration Actuator Testing
-SMA springs were individually validated before integration. Boiling water testing confirmed the **thermal shape memory effect** — springs instantly returned to their coiled form. Electrical testing via battery confirmed **resistive heating contraction**, slightly slower than thermal activation, as expected.
+Two independent circuits power the actuation:
 
-### Functional Performance — Closing Actuation ✅
-- When the closing circuit was energised, the **central three panels bent inward smoothly and visibly**
-- Full closure reliably achieved in **approximately 20 seconds** across repeated tests
-- The fixed triangular braces on the final three panels contributed to consistent overall curvature
-- This confirmed the feasibility of SMA springs driving surface deformation in a modular architecture
+```
+Closing Circuit:   [Battery Pack] ── Spring 1 ── Spring 2 ── Spring 3 ── [GND]
+Opening Circuit:   [Battery Pack] ── Spring 4 ── Spring 5 ── Spring 6 ── [GND]
+```
 
-### Functional Performance — Opening Actuation ⚠️
-- Only the **joint immediately after the fixed section** fully extended (~35 seconds)
-- The remaining two joints remained stuck — helical springs became caught between panel gaps and hinge joints
-- A **manual external push** was required to complete the opening motion
-- This indicates a mechanical constraint rather than an actuation force deficiency
+- **Power supply:** 4× AA batteries (~6 V, ~2.5 A)
+- **Connections:** Manual bare-wire contact (no switches in V1)
+- **Assembly:** Soldering completed under supervision; steel clips used as spring terminals
 
-### Key Performance Summary
+---
+
+### 4. Testing Methodology
+
+All testing was **qualitative** — focused on observing and documenting mechanical performance and deformation behaviour.
+
+**Phase 1 — Pre-integration actuator testing:**
+- SMA springs hand-stretched and submerged in boiling water (>70°C) → immediate shape recovery ✅
+- Springs connected via steel clips to battery → electrical contraction confirmed ✅ (slower than thermal, as expected from resistive heating)
+
+**Phase 2 — Integrated system testing:**
+- Closing circuit energised → panels bent inward smoothly and consistently
+- Opening circuit energised → partial recovery; springs jammed in hinge gaps at joints 2 and 3
+
+---
+
+## 📊 Results & Performance
 
 | Test | Outcome |
 |---|---|
-| SMA wire actuation | ❌ Insufficient strain (5% vs 8% required) |
-| SMA spring thermal test | ✅ Instant recovery confirmed |
-| SMA spring electrical test | ✅ Contraction observed |
-| Prototype closing | ✅ Full closure in ~20 seconds |
-| Prototype opening | ⚠️ Partial — manual assist required |
-| Forearm wrapping | ✅ Structure conformed around forearm |
+| SMA thermal validation | ✅ Immediate recovery in boiling water |
+| SMA electrical validation | ✅ Visible contraction at 2.5 A |
+| Closing actuation | ✅ Full closure in ~20 seconds, repeatable |
+| Opening actuation | ⚠️ Joint 1 fully recovered; joints 2–3 required manual assist |
+| Energy per cycle | ~300 J (2.5 A × 6 V × 20 s) |
+| Actuation method | Manual bare-wire contact |
+| Sensors / feedback | None (qualitative observation) |
+
+> ⚠️ **Key limitation:** SMA spring geometry (helical) caused jamming in hinge gaps during extension. The closing direction performed reliably; bidirectional autonomous actuation requires design iteration.
 
 ---
 
-## Discussion & Design Improvements
+## 🛠️ Design Improvements
 
-### Interpretation of Results
-The project successfully demonstrated that **SMA springs can generate controlled, repeatable deformation** in a modular system. The 20-second closing cycle confirmed SMA springs are viable for small, low-power wearable applications. However, the prototype's inability to reopen fully revealed that **mechanical geometry** — not actuation force — was the limiting factor.
+Based on experimental findings, the following improvements are proposed for V2:
 
-### Identified Challenges
-- **Spring jamming:** Helical SMA springs caught between panel gaps and hinges during extension, particularly at partially-braced joints
-- **Uneven actuation:** Manual spring and eyelet placement caused non-uniform pulling force across joints
-- **Uneven heating:** Manual current application caused localised hotspots on some springs, slightly altering their geometry and reducing strength over cycles
-- **Material fatigue:** Repeated thermal cycling caused gradual reduction in spring recovery capability and hinge loosening
+- 📐 **Curved joint profiles** — Reduce panel edge gaps to prevent SMA spring jamming during extension
+- 🖨️ **3D-printed structural frame** — Replace hand-cut plywood for higher dimensional accuracy, consistent hinge spacing, and better spring mounting points
+- 🧤 **Thermal insulation sleeves** — Enclose SMA springs to prevent mechanical friction, environmental exposure, and user skin contact during heating
+- 🎛️ **Arduino microcontroller** — Manage voltage regulation, actuation cycles, and sensor input for controlled, repeatable performance
+- 🔘 **Electric switches** — Replace manual bare-wire contact to improve safety and activation consistency
+- 📡 **Wireless/voice activation** — Enable remote triggering to eliminate manual contact with live circuits
 
-### Proposed Design Improvements
+---
 
-| Improvement | Benefit |
+## 🚀 Future Work
+
+- **Full body scaling** — Extend the modular panel concept to larger adaptive surface systems (e.g. arm, torso)
+- **Closed-loop control** — Integrate flex sensors or IMUs to provide real-time positional feedback for autonomous actuation
+- **Reinforcement Learning** — Train an RL agent to optimise actuation sequences and timing for smoother, more consistent deformation
+- **Bi-directional autonomy** — Redesign spring mounting geometry to achieve fully autonomous opening and closing without external input
+- **Advanced materials** — Explore two-way SMAs or SMA composites to enable passive return-to-form without a second actuation circuit
+
+---
+
+## 🌍 Applications
+
+| Domain | Application |
 |---|---|
-| Reduce panel edge gaps; use curved joint profiles | Prevents spring jamming during reopening |
-| 3D-printed structural frame | Improves dimensional accuracy, hinge spacing, and spring mounting precision |
-| Thermal insulation sleeves on SMA springs | Prevents skin burns; protects springs from friction and environmental exposure |
-| Arduino / microcontroller integration | Enables automated voltage control, actuation cycle management, and sensor input |
-| Voice / remote-operated sensors | Allows wireless activation, eliminating manual contact |
-| Electric switches + LED indicators | Improves user safety, circuit visibility, and consistent activation performance |
-| Passive/active locking system | Holds the structure in deformed position when worn |
+| 🏥 Medical Rehabilitation | Lightweight, flexible exoskeleton for limb recovery assistance |
+| 🕹️ VR / AR | Adaptive haptic suit components with no rigid external hardware |
+| 🚀 Space | Shape-adaptive structures that reduce payload weight and reconfigure on-mission |
+| 🤖 Soft Robotics | Modular robotic skin for safe human-robot interaction |
+| 🎓 Education | Low-cost programmable matter demonstrator kit |
 
 ---
 
-## Sustainability & Reflections
+## 📝 Academic Context
 
-The prototype consumed approximately **300 joules per cycle** (2.5 A × 6 V × 20 s) — comparable to lightweight servo systems but with significantly fewer moving parts and lower structural complexity. The use of recyclable plywood and simple mechanical components minimised environmental impact.
-
-SMA springs, however, are susceptible to **thermal-mechanical fatigue** from repeated cyclic loading, gradually reducing actuation reliability (Hartl & Lagoudas, 2007). A modular, replaceable spring design would address this for long-term sustainability.
-
-The project demonstrated that **low-cost, hand-fabricated adaptive systems** can produce meaningful engineering results, supporting the broader goal of affordable and accessible soft robotics. The design philosophy prioritised mechanical simplicity and low fabrication cost over precision — a trade-off accepted in favour of accessibility and rapid prototyping.
-
-> *"The success of smart material systems is not material selection alone but also mechanical integration and design optimisation."*
-
----
-
-## Conclusion
-
-A flexible six-panel robotic skin prototype was successfully developed using plywood, flush hinges, and SMA springs. The key outcomes were:
-
-- **SMA springs provided effective actuation** — enabling controlled movement and partial wrapping around a forearm
-- **Full closure was achieved reliably in ~20 seconds**, demonstrating SMA springs are viable for compact, motorless wearable systems
-- **Opening actuation was partially limited** by spring geometry jamming at hinge gaps — a mechanical constraint, not an actuation force failure
-- The project established a **solid proof-of-concept** for scalable, lightweight adaptive structures
-
-This project shows it is possible to create smart, adaptive systems **without complex electronics**, provided mechanical design is carefully considered. The prototype offers a foundation for future development of simple, reliable, energy-efficient wearable assistive devices.
+| | |
+|---|---|
+| **Module** | ENGG341 Individual Project |
+| **Degree** | MEng Aerospace Engineering |
+| **University** | University of Liverpool |
+| **Submission** | May 2025 |
+| **Supervisor** | Paolo Paoletti |
+| **Technical Support** | Derek Neary (design, construction, testing), Richard Potter (SMA material selection) |
 
 ---
 
-## References
+## 👤 About
 
-- Asbeck et al. (2013). Biologically-inspired soft exosuit. *IEEE ICORR 2013*.
-- Bar-Cohen, Y. (2004). Electroactive Polymer (EAP) Actuators as Artificial Muscles. https://doi.org/10.1117/3.547465
-- Gilpin et al. (2008). Miche: Modular shape formation by self-disassembly. *International Journal of Robotics Research*, 27(3-4). https://doi.org/10.1177/0278364907085557
-- Huang et al. (2010). Shape memory materials. *Materials Today*, 13(7-8). https://doi.org/10.1016/S1369-7021(10)70128-0
-- Ilievski et al. (2011). Soft robotics for chemists. *Angewandte Chemie*, 50(8). https://doi.org/10.1002/anie.201006464
-- Kim et al. (2013). Soft robotics: A bioinspired evolution. *Trends in Biotechnology*, 31(5). https://doi.org/10.1016/j.tibtech.2013.03.002
-- Lagoudas & Lagoudas (2008). *Shape Memory Alloys* (Vol. 1). Springer. https://doi.org/10.1007/978-0-387-47685-8
-- Majidi, C. (2014). Soft robotics: a perspective. *Soft Robotics*, 1(1).
-- Mertmann & Vergani (2008). Design and application of shape memory actuators. *European Physical Journal Special Topics*, 158(1). https://doi.org/10.1140/epjst/e2008-00679-9
-- Mohd Jani et al. (2014). A review of shape memory alloy research. *Materials and Design*, 56. https://doi.org/10.1016/j.matdes.2013.11.084
-- Otsuka & Wayman (1999). *Shape Memory Materials*. Cambridge University Press.
-- Polygerinos et al. (2015). Soft robotic glove for combined assistance and rehabilitation. *Robotics and Autonomous Systems*.
-- Shepherd et al. (2011). Multigait soft robot. *PNAS*, 108(51). https://doi.org/10.1073/pnas.1116564108
-- Shintake et al. (2018). Soft Robotic Grippers. *Advanced Materials*, 30(29). https://doi.org/10.1002/adma.201707035
-- Someya & Amagai (2019). Toward a new generation of smart skins. *Nature Biotechnology*, 37(4). https://doi.org/10.1038/s41587-019-0079-1
-- Tsukahara et al. (2009). Standing-up motion support with Robot Suit HAL. *IEEE ICORR 2009*.
+**Shageeshan Alagesan**  
+MEng Aerospace Engineering — University of Liverpool (2025)  
+Currently based in Zürich, Switzerland, pursuing entry-level roles in MRO and aerospace engineering.
+
+Interests: Aerospace systems, smart materials, soft robotics, CAD, and building things that work with minimal complexity.
 
 ---
 
-*University of Liverpool — School of Engineering | ENGG341 Individual Project | May 2025*
+## 📄 License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
+
+---
+
+## 📧 Contact
+
+**Shageeshan Alagesan**  
+🔗 [GitHub](https://github.com/shageeshanalagesan)  
+📍 Zürich, Switzerland
+
+---
+
+*This prototype was developed as a proof-of-concept for programmable matter and adaptive structures using accessible materials and smart actuation. It demonstrates that meaningful shape adaptation is achievable without complex electronics — given careful mechanical design.*
