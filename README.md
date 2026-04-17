@@ -45,6 +45,8 @@ Rather than relying on conventional motors or pneumatics, this prototype demonst
 
 ### 📸 Prototype Gallery
 
+<img width="3024" height="4032" alt="IMG_7624" src="https://github.com/user-attachments/assets/657d375e-a88c-44a6-a846-ab6f52f8432a" />
+
 > *Photos of the prototype in open, actuating, and closed states are documented in the Appendix of the project report.*
 
 **Prototype States:**
